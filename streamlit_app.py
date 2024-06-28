@@ -6,7 +6,7 @@ from pathlib import Path
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
     page_title='here is data',
-    page_icon=':Broccoli:', # This is an emoji shortcode. Could be a URL too.
+    page_icon=':🥦:', # This is an emoji shortcode. Could be a URL too.
 )
 
 # -----------------------------------------------------------------------------
@@ -24,6 +24,8 @@ def get_gdp_data():
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
     DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
     raw_gdp_df = pd.read_csv(DATA_FILENAME)
+    DATA_FILENAME1 = Path(__file__).parent/'data/suggestion.csv'
+    raw_gdp_df1 = pd.read_csv(DATA_FILENAME1)
 
     MIN_YEAR = 1960
     MAX_YEAR = 2022
